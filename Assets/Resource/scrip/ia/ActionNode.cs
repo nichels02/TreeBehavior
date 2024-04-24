@@ -4,11 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using BehaviorDesigner.Runtime.Tasks;
 
-public enum UnitType
-{
-    Terroristas,
-    Antiterroristas
-}
+
 
 
 [TaskCategory("IA SC/Node Base")]
@@ -35,7 +31,8 @@ public class ActionNode : Action
 
         if (_IACharacterVehicle != null)
         {
-            //UnitType=this._IACharacterVehicle.hea
+            _UnitType = this._IACharacterVehicle.Health.UnitType;
         }
+       
     }
 }

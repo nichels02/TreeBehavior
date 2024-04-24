@@ -11,6 +11,11 @@ public class IACharacterControl : MonoBehaviour
     protected VisionSensor _AIEye;
     protected Health health;
 
+    public Health Health
+    {
+        get => health;
+    }
+
     //public SoundCharacter SoundCharacterIA;
 
     public virtual void LoadComponent()

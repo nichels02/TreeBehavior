@@ -18,11 +18,11 @@ public class IACharacterVehicleLand : IACharacterVehicle{
         agent.SetDestination(position);
         if (this.agent.remainingDistance > this.agent.stoppingDistance)
         {
-            (this.character).Move(this.agent.desiredVelocity);
+            //(this.character).Move(this.agent.desiredVelocity);
         }
         else
         {
-            (this.character).Move(Vector3.zero);
+            //(this.character).Move(Vector3.zero);
         }
     }
 
