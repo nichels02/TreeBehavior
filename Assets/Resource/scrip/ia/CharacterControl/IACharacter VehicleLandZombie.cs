@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class IACharacterVehicleLandZombie : IACharacterVehicleLand
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    public float detectionRange = 15f;
 
-    // Update is called once per frame
-    void Update()
+    public override void LoadComponent()
     {
-        
+        base.LoadComponent();
     }
 }

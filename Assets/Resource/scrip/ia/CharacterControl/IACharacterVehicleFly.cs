@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class IACharacterVehicleFly : IACharacterVehicle
 {
-    // Start is called before the first frame update
-    void Start()
+    public float flightSpeed = 10f;
+    public override void LoadComponent()
     {
-        
+        base.LoadComponent();
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void MoveToPositiononEvade()
+    {
+    }
+    public override void MoveToPositiononWander(Vector3 position)
     {
         
     }

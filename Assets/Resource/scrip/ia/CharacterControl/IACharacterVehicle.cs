@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class IACharacterVehicle : IACharacterControl
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void LoadComponent()
+    {
+        base.LoadComponent();   
+    }
+    #region Move
+    public virtual void MoveToPositiononEvade()
+    {
+
+    }
+    public virtual void MoveToPositiononWanderEnemy()
+    {
+
+    }
+    public virtual void MoveToPositiononWander(Vector3 position)
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public virtual void MoveToAllied()
     {
-        
+
+    }
+    public virtual void MoveToEnemy()
+    {
+
     }
 }
+#endregion

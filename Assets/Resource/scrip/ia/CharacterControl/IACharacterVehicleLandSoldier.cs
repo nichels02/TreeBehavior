@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class IACharacterVehicleLandSoldier : IACharacterVehicleLand
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    public float attackRange = 10f;
 
-    // Update is called once per frame
-    void Update()
+    public override void LoadComponent()
     {
-        
+        base.LoadComponent();
+       
     }
 }
