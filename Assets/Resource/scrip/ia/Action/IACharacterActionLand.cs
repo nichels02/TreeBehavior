@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class IACharacterActionLand : IACharacterAction
 {
-    // Start is called before the first frame update
-    void Start()
+    protected WeaponsManager _WeaponsManager;
+
+    public override void LoadComponent()
     {
-        
+        base.LoadComponent();
+        _WeaponsManager = GetComponent<WeaponsManager>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+    #region Action
+
+    public virtual void FirePlay()
     {
-        
+        _WeaponsManager.Fire();
     }
+
+    public virtual void StopFire()
+    {
+        _WeaponsManager.StopFire();
+    }
+
+    #endregion
 }

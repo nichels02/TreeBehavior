@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class IACharacterAction : IACharacterControl
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void LoadComponent()
     {
-        
-    }
+        base.LoadComponent();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
