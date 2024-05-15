@@ -244,7 +244,7 @@ public class VisionSensor : MonoBehaviour
         MainVision.CreateMesh();
     }
 
-    // M?todo para dibujar el radio de visi?n en el editor
+    // M�todo para dibujar el radio de visi�n en el editor
     private void OnDrawGizmos()
     {
         MainVision.OnDrawGizmos();
