@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23f08d2ae4cba14087c1ed36193d82b, type: 3}
+  m_Name: Avispa
+  m_EditorClassIdentifier: 
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(148.708328,-53.7916641)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(3.916668,141.208252)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-0.396057129,161.489838)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-497.6054,164.285034)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNotHungry","NodeData":{"Offset":"(-127.9841,160.057068)"},"ID":4,"Name":"Action
+        Not Hungry","Instant":true},{"Type":"ActionBackHome","NodeData":{"Offset":"(132.014908,164.342834)"},"ID":5,"Name":"Action
+        Back Home","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-82.167984,170)"},"ID":6,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionHungry","NodeData":{"Offset":"(-156.77565,144.81897)"},"ID":7,"Name":"Action
+        Hungry","Instant":true},{"Type":"ActionNotViewAbeja","NodeData":{"Offset":"(-5.907341,135.182983)"},"ID":8,"Name":"Action
+        Not View Abeja","Instant":true},{"Type":"ActionWander","NodeData":{"Offset":"(136.4006,145.439209)"},"ID":9,"Name":"Action
+        Wander","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(378.7181,180)"},"ID":10,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionHungry","NodeData":{"Offset":"(-204.1026,138.7179)"},"ID":11,"Name":"Action
+        Hungry","Instant":true},{"Type":"ActionViewAbeja","NodeData":{"Offset":"(-62.06076,144.41333)"},"ID":12,"Name":"Action
+        View Abeja","Instant":true},{"Type":"ActionNotRangeAttack","NodeData":{"Offset":"(91.7854,140.567139)"},"ID":13,"Name":"Action
+        Not Range Attack","Instant":true},{"Type":"ActionFollowAbeja","NodeData":{"Offset":"(246.91333,143.131287)"},"ID":14,"Name":"Action
+        Follow Abeja","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1058.75781,190)"},"ID":15,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionHungry","NodeData":{"Offset":"(-285.483948,130.32251)"},"ID":16,"Name":"Action
+        Hungry","Instant":true},{"Type":"ActionViewAbeja","NodeData":{"Offset":"(-145.483887,130.32251)"},"ID":17,"Name":"Action
+        View Abeja","Instant":true},{"Type":"ActionRangeAttack","NodeData":{"Offset":"(-2.48925781,135.6684)"},"ID":18,"Name":"Action
+        Range Attack","Instant":true},{"Type":"ActionAttack","NodeData":{"Offset":"(170.091309,138.894165)"},"ID":19,"Name":"Action
+        Attack","Instant":true}]}]}]}}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 1.6.8
