@@ -4,8 +4,8 @@ using UnityEngine;
 
 public enum UnitType
 {
-    Terroristas,
-    Antiterroristas
+    Abejas,
+    Avispas
 }
 
 public class Health : MonoBehaviour

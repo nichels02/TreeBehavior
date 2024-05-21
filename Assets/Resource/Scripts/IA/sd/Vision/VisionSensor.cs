@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 [System.Serializable]
 public class DataViewBase
 {
@@ -231,10 +232,11 @@ public class VisionSensor : MonoBehaviour
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
-            Health health = targetsInViewRadius[i].GetComponent<Health>();
-            if (health != null && MainVision.IsInSight(health.AimOffset))
+            Health Health = targetsInViewRadius[i].GetComponent<Health>();
+
+            if (Health != null && MainVision.IsInSight(Health.AimOffset) && Health.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
             {
-                EnemyView = health;
+                EnemyView = Health;
             }
         }
     }
@@ -244,7 +246,7 @@ public class VisionSensor : MonoBehaviour
         MainVision.CreateMesh();
     }
 
-    // M�todo para dibujar el radio de visi�n en el editor
+    // Método para dibujar el radio de visión en el editor
     private void OnDrawGizmos()
     {
         MainVision.OnDrawGizmos();
@@ -257,3 +259,4 @@ public class VisionSensor : MonoBehaviour
 
     }
 }
+
