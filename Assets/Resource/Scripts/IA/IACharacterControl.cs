@@ -8,8 +8,9 @@ using BehaviorDesigner.Runtime;
 public class IACharacterControl : MonoBehaviour
 {
     //protected ThirdPersonCharacterAnimatorBase character;
-    protected VisionSensor _AIEye;
-    protected Health health;
+    public VisionSensor _AIVision;
+    public Health health;
+    public NavMeshAgent agent;
 
     public Health Health
     {
@@ -20,7 +21,8 @@ public class IACharacterControl : MonoBehaviour
 
     public virtual void LoadComponent()
     {
-        _AIEye = GetComponent<VisionSensor>();
+        _AIVision = GetComponent<VisionSensor>();
         health = GetComponent<Health>();
+        agent = GetComponent<NavMeshAgent>();
     }
 }

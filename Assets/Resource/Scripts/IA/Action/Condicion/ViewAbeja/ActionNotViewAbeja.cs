@@ -8,5 +8,5 @@ using UnityEngine;
 //NodoDeCondicion
 public class ActionNotViewAbeja : ActionNodeAction
 {
-
+    
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 [TaskCategory("IA SC/NodoDeAccion")]
 //NodoDeAccion
 //NodoDeCondicion
-public class ActionWander : ActionNodeAction
+public class ActionFollowEnemy : ActionNodeAction
 {
     public override void OnStart()
     {
@@ -19,7 +19,7 @@ public class ActionWander : ActionNodeAction
         {
             return TaskStatus.Failure;
         }
-        _IACharacterVehicle.Wander();
+        _IACharacterVehicle.MoveToEnemy();
         //SwitchMoveToAllied();
         return TaskStatus.Success;
     }

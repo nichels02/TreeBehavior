@@ -5,7 +5,8 @@ using UnityEngine;
 public enum UnitType
 {
     Abejas,
-    Avispas
+    Avispas,
+    Flor
 }
 
 public class Health : MonoBehaviour
@@ -13,6 +14,8 @@ public class Health : MonoBehaviour
     public int life;
     public Transform AimOffset;
     public UnitType UnitType;
+    public int RecoleccionMaxima = 100;
+    public int RecoleccionActual = 0;
 
     public bool IsDead
     {

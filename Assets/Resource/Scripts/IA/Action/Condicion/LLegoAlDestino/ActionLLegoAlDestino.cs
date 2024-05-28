@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[TaskCategory("IA SC/NodoDeCondicion/RecoleccionCompleta")]
+[TaskCategory("IA SC/NodoDeCondicion")]
 //NodoDeAccion
 //NodoDeCondicion
-public class ActionNotRecoleccionCompleta : ActionNodeAction
+public class ActionLLegoAlDestino : ActionNodeAction
 {
     public override void OnStart()
     {
@@ -24,14 +24,22 @@ public class ActionNotRecoleccionCompleta : ActionNodeAction
 
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health.RecoleccionActual <= _IACharacterVehicle.health.RecoleccionMaxima)
+            if (_IACharacterVehicle.agent.remainingDistance <= _IACharacterVehicle.agent.stoppingDistance)
+            {
+                return TaskStatus.Success;
+            }
+            else if (_IACharacterVehicle.agent.destination == null)
             {
                 return TaskStatus.Success;
             }
         }
         else if (_IACharacterAction != null)
         {
-            if (_IACharacterAction.health.RecoleccionActual <= _IACharacterAction.health.RecoleccionMaxima)
+            if (_IACharacterAction.agent.remainingDistance <= _IACharacterAction.agent.stoppingDistance)
+            {
+                return TaskStatus.Success;
+            }
+            else if (_IACharacterVehicle.agent.destination == null)
             {
                 return TaskStatus.Success;
             }

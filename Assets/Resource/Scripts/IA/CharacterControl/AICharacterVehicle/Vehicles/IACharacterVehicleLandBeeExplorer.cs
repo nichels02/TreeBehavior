@@ -8,7 +8,7 @@ public class IACharacterVehicleLandBeeExplorer : IACharacterVehicleLandWander
     {
         base.LoadComponent();
     }
-    public override void MoveToPosition(Vector2 position)
+    public override void MoveToPosition(Vector3 position)
     {
         base.MoveToPosition(position);
     }
@@ -16,15 +16,31 @@ public class IACharacterVehicleLandBeeExplorer : IACharacterVehicleLandWander
     {
         base.Wander();
     }
-
-    public virtual void Evade(Vector2 PosicionEvadir, Vector2 PosicionActual, Vector2 PosicionDeseada)
+    public override void CalcularDireccion()
     {
-        float Distancia = Vector2.Distance(PosicionDeseada, PosicionActual);
+        base.CalcularDireccion();
+    }
+
+
+
+    private void Update()
+    {
+        CalcularDireccion();
+    }
+
+    public override void MoveToPositiononEvade()
+    {
+        Evade(_AIVision.EnemyView.transform.position,/**/ transform.position,/**/ agent.destination);
+    }
+
+    public virtual void Evade(Vector3 PosicionEvadir, Vector3 PosicionActual, Vector3 PosicionDeseada)
+    {
+        float Distancia = Vector3.Distance(PosicionDeseada, PosicionActual);
         Distancia = Distancia > 5 ? Distancia : 6;
-        Vector2 DireccionOpuesta = (PosicionActual - PosicionEvadir).normalized;
+        Vector3 DireccionOpuesta = (PosicionActual - PosicionEvadir).normalized;
         DireccionOpuesta = PosicionActual + DireccionOpuesta * Distancia;
 
-        Vector2 X = (DireccionOpuesta + PosicionActual) / 2;
+        Vector3 X = (DireccionOpuesta + PosicionActual) / 2;
 
         MoveToPosition(X);
 

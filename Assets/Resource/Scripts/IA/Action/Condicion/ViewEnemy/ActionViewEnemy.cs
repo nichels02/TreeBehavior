@@ -3,30 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[TaskCategory("IA SC/NodoDeCondicion/RangeAttack")]
+[TaskCategory("IA SC/NodoDeCondicion/ViewEnemy")]
 //NodoDeAccion
 //NodoDeCondicion
-public class ActionNotRangeAttack : ActionNodeAction
+public class ActionViewEnemy : ActionNodeAction
 {
-    public float Distance;
     public override void OnStart()
     {
         base.OnStart();
     }
     public override TaskStatus OnUpdate()
     {
-        if (_IACharacterVehicle != null)
+        if (_IACharacterVehicle != null && _IACharacterVehicle.health.IsDead)
         {
-            if (_IACharacterVehicle.health.IsDead)
-            {
-                return TaskStatus.Failure;
-            }
+            return TaskStatus.Failure;
+        }
+        else if (_IACharacterAction != null && _IACharacterAction.health.IsDead)
+        {
+            return TaskStatus.Failure;
         }
         if (_IACharacterVehicle != null)
         {
             if (_IACharacterVehicle._AIVision.EnemyView != null)
             {
-                if (Distance <= Vector3.Distance(_IACharacterVehicle.transform.position, _IACharacterVehicle._AIVision.EnemyView.transform.position))
+                if(_IACharacterVehicle._AIVision.ElTipoDeEnemigo == _IACharacterVehicle._AIVision.EnemyView.UnitType)
                 {
                     return TaskStatus.Success;
                 }
@@ -36,7 +36,7 @@ public class ActionNotRangeAttack : ActionNodeAction
         {
             if (_IACharacterAction._AIVision.EnemyView != null)
             {
-                if (Distance <= Vector3.Distance(_IACharacterAction.transform.position, _IACharacterAction._AIVision.EnemyView.transform.position))
+                if (_IACharacterAction._AIVision.ElTipoDeEnemigo == _IACharacterAction._AIVision.EnemyView.UnitType)
                 {
                     return TaskStatus.Success;
                 }

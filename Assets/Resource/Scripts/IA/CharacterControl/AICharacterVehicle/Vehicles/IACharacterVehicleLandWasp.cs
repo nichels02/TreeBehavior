@@ -8,7 +8,7 @@ public class IACharacterVehicleLandWasp : IACharacterVehicleLandWander
     {
         base.LoadComponent();
     }
-    public override void MoveToPosition(Vector2 position)
+    public override void MoveToPosition(Vector3 position)
     {
         base.MoveToPosition(position);
     }

@@ -11,10 +11,26 @@ public class IACharacterVehicleLandBeeSoldier : IACharacterVehicleLand
         base.LoadComponent();
     }
 
-    public override void MoveToPosition(Vector2 position)
+    public override void MoveToPosition(Vector3 position)
     {
         base.MoveToPosition(position);
     }
+
+    public override void CalcularDireccion()
+    {
+        base.CalcularDireccion();
+    }
+
+
+
+
+
+    private void Update()
+    {
+        CalcularDireccion();
+    }
+
+
 
     public virtual void Patrullaje()
     {
