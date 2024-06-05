@@ -25,6 +25,17 @@ public class IACharacterActionLand : IACharacterAction
     {
         _WeaponsManager.StopFire();
     }
+    public virtual void atack()
+    {
 
+    }
+    public virtual void Warn()
+    {
+
+    }
+    public virtual void Gather()
+    {
+
+    }
     #endregion
 }

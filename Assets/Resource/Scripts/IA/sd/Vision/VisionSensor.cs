@@ -178,6 +178,8 @@ public class VisionSensor : MonoBehaviour
     [Space(20)]
     [Header("Enemy View")]
     public Health EnemyView;
+    [Header("Allied View")]
+    public Health AlliedView;
     public UnitType ElTipoDeEnemigo;
     [Space(20)]
     [Header("Scan Layer Mask")]
@@ -198,7 +200,7 @@ public class VisionSensor : MonoBehaviour
     {
         LoadComponent();
     }
-    public void LoadComponent()
+    public virtual void LoadComponent()
     {
 
         MainVision.Owner = GetComponent<Health>();
@@ -210,11 +212,11 @@ public class VisionSensor : MonoBehaviour
             arrayRate[i] = (float)UnityEngine.Random.Range(randomWaitScandMin, randomWaitScandMax);
         }
     }
-    private void Update()
-    {
-        UpdateScand();
-    }
-    void UpdateScand()
+    //private void Update()
+    //{
+    //    UpdateScand();
+    //}
+    public virtual void UpdateScand()
     {
         if (Framerate > arrayRate[index])
         {
@@ -225,7 +227,7 @@ public class VisionSensor : MonoBehaviour
         }
         Framerate += Time.deltaTime;
     }
-    private void Scan()
+    public virtual void Scan()
     {
         EnemyView = null;
         MainVision.InSight = false;

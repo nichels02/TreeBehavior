@@ -21,19 +21,32 @@ public class ActionNotRecoleccionCompleta : ActionNodeAction
                 return TaskStatus.Failure;
             }
         }
+        else if (_IACharacterAction != null)
+        {
+            if (_IACharacterAction.health.IsDead)
+            {
+                return TaskStatus.Failure;
+            }
+        }
 
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health.RecoleccionActual <= _IACharacterVehicle.health.RecoleccionMaxima)
+            if(_IACharacterVehicle.health is HealthBee)
             {
-                return TaskStatus.Success;
+                if(((HealthBee)_IACharacterVehicle.health).RecoleccionActual <= ((HealthBee)_IACharacterVehicle.health).RecoleccionMaxima)
+                {
+                    return TaskStatus.Success;
+                }
             }
         }
         else if (_IACharacterAction != null)
         {
-            if (_IACharacterAction.health.RecoleccionActual <= _IACharacterAction.health.RecoleccionMaxima)
+            if (_IACharacterAction.health is HealthBee)
             {
-                return TaskStatus.Success;
+                if (((HealthBee)_IACharacterAction.health).RecoleccionActual <= ((HealthBee)_IACharacterAction.health).RecoleccionMaxima)
+                {
+                    return TaskStatus.Success;
+                }
             }
         }
 
