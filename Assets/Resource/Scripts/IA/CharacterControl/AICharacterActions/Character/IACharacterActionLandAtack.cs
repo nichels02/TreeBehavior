@@ -21,9 +21,16 @@ public class IACharacterActionLandAtack : IACharacterActionLand
         {
             if (((VisionSensorAttack)_AIVision).EnemyView != null)
             {
-                ((VisionSensorAttack)_AIVision).EnemyView.Damage(damage, health);
+                if(((VisionSensorAttack)_AIVision).EnemyView.Damage(damage, health))
+                {
+                    LoMataste();
+                }
             }
         }
+
+    }
+    protected virtual void LoMataste()
+    {
 
     }
 }

@@ -8,7 +8,6 @@ using UnityEngine;
 //NodoDeCondicion
 public class ActionNotRangeAttack : ActionNodeAction
 {
-    public float Distance;
     public override void OnStart()
     {
         base.OnStart();
@@ -26,20 +25,50 @@ public class ActionNotRangeAttack : ActionNodeAction
         {
             if (_IACharacterVehicle._AIVision.EnemyView != null)
             {
-                if (Distance <= Vector3.Distance(_IACharacterVehicle.transform.position, _IACharacterVehicle._AIVision.EnemyView.transform.position))
-                {
-                    return TaskStatus.Success;
+                if (_IACharacterVehicle._AIVision is VisionSensorAttack)
+                {   
+                    if (((VisionSensorAttack)_IACharacterVehicle._AIVision).HealthAtaque == null)
+                    {
+                        return TaskStatus.Success;
+                    }
+                    else
+                    {
+                        return TaskStatus.Failure;
+                    }
                 }
+                else
+                {
+                    return TaskStatus.Failure;
+                }
+            }
+            else
+            {
+                return TaskStatus.Failure;
             }
         }
         else if (_IACharacterAction != null)
         {
             if (_IACharacterAction._AIVision.EnemyView != null)
             {
-                if (Distance <= Vector3.Distance(_IACharacterAction.transform.position, _IACharacterAction._AIVision.EnemyView.transform.position))
+                if (_IACharacterAction._AIVision is VisionSensorAttack)
                 {
-                    return TaskStatus.Success;
+                    if (((VisionSensorAttack)_IACharacterAction._AIVision).HealthAtaque == null)
+                    {
+                        return TaskStatus.Success;
+                    }
+                    else
+                    {
+                        return TaskStatus.Failure;
+                    }
                 }
+                else
+                {
+                    return TaskStatus.Failure;
+                }
+            }
+            else
+            {
+                return TaskStatus.Failure;
             }
         }
 

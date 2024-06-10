@@ -31,7 +31,7 @@ public class ActionNode : Action
 
         if (_IACharacterVehicle != null)
         {
-            _UnitType = this._IACharacterVehicle.Health.UnitType;
+            _UnitType = _IACharacterVehicle.Health.MyUnitType;
         }
        
     }

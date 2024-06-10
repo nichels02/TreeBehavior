@@ -27,9 +27,9 @@ public class ActionNotViewEnemy : ActionNodeAction
             {
                 return TaskStatus.Success;
             }
-            else if (_IACharacterVehicle._AIVision.ElTipoDeEnemigo != _IACharacterVehicle._AIVision.EnemyView.UnitType)
+            else if (_IACharacterVehicle.health.ElTipoDeEnemigo != _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
             {
-                return TaskStatus.Success;
+                return TaskStatus.Failure;
             }
         }
         else if (_IACharacterAction != null)
@@ -38,9 +38,9 @@ public class ActionNotViewEnemy : ActionNodeAction
             {
                 return TaskStatus.Success;
             }
-            else if (_IACharacterAction._AIVision.ElTipoDeEnemigo != _IACharacterAction._AIVision.EnemyView.UnitType)
+            else if (_IACharacterAction.health.ElTipoDeEnemigo != _IACharacterAction._AIVision.EnemyView.MyUnitType)
             {
-                return TaskStatus.Success;
+                return TaskStatus.Failure;
             }
         }
 

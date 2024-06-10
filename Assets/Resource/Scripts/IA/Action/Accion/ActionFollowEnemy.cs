@@ -19,6 +19,8 @@ public class ActionFollowEnemy : ActionNodeAction
         {
             return TaskStatus.Failure;
         }
+
+        
         _IACharacterVehicle.MoveToEnemy();
         //SwitchMoveToAllied();
         return TaskStatus.Success;

@@ -10,9 +10,14 @@ public class HealthBee : Health
     public int RecoleccionMaxima = 100;
     public int RecoleccionActual = 0;
 
-    public override void Damage(int damage, Health healt)
+    private void Start()
     {
-        base.Damage(damage, healt);
+        LoadComponent();
+    }
+
+    public override bool Damage(int damage, Health healt)
+    {
+        bool x = base.Damage(damage, healt);
 
         if(IsDead)
         {
@@ -21,11 +26,11 @@ public class HealthBee : Health
                 
             Dead();
         }
-;
+        return x;
     }
     public override void Dead()
     {
-
+        base.Dead();
     }
 
 }

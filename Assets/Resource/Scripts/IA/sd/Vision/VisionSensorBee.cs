@@ -46,18 +46,18 @@ public class VisionSensorBee : VisionSensor
 
             if (Health != null && MainVision.IsInSight(Health.AimOffset) && Health.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
             {
-                if (Health.UnitType == UnitType.Flor)
+                if (Health.MyUnitType == UnitType.Flor)
                 {
                     ResourceView = Health;
                 }
                 else
-                if (Health.UnitType == UnitType.Avispas)
+                if (Health.MyUnitType == UnitType.Avispas)
                 {
 
                     EnemyView = Health;
                 }
                 else
-                if (Health.UnitType == UnitType.Abejas)
+                if (Health.MyUnitType == UnitType.Abejas)
                 {
                     AlliedView = Health;
                 }

@@ -19,8 +19,13 @@ public class ActionWander : ActionNodeAction
         {
             return TaskStatus.Failure;
         }
-        _IACharacterVehicle.Wander();
+        if(_IACharacterVehicle.agent.remainingDistance <= _IACharacterVehicle.agent.stoppingDistance || _IACharacterVehicle.agent.destination == null)
+        {
+            _IACharacterVehicle.Wander();
+            return TaskStatus.Success;
+        }
+
         //SwitchMoveToAllied();
-        return TaskStatus.Success;
+        return TaskStatus.Failure;
     }
 }

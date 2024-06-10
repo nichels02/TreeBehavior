@@ -26,7 +26,7 @@ public class ActionViewEnemy : ActionNodeAction
         {
             if (_IACharacterVehicle._AIVision.EnemyView != null)
             {
-                if(_IACharacterVehicle._AIVision.ElTipoDeEnemigo == _IACharacterVehicle._AIVision.EnemyView.UnitType)
+                if(_IACharacterVehicle.health.ElTipoDeEnemigo == _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
                 {
                     return TaskStatus.Success;
                 }
@@ -36,7 +36,7 @@ public class ActionViewEnemy : ActionNodeAction
         {
             if (_IACharacterAction._AIVision.EnemyView != null)
             {
-                if (_IACharacterAction._AIVision.ElTipoDeEnemigo == _IACharacterAction._AIVision.EnemyView.UnitType)
+                if (_IACharacterAction.health.ElTipoDeEnemigo == _IACharacterAction._AIVision.EnemyView.MyUnitType)
                 {
                     return TaskStatus.Success;
                 }

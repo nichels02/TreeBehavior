@@ -180,7 +180,8 @@ public class VisionSensor : MonoBehaviour
     public Health EnemyView;
     [Header("Allied View")]
     public Health AlliedView;
-    public UnitType ElTipoDeEnemigo;
+    //public UnitType ElTipoDeEnemigo;
+    //public UnitType ElTipoDeHuida;
     [Space(20)]
     [Header("Scan Layer Mask")]
     public LayerMask ScanLayerMask; // Capa de los objetos a detectar
