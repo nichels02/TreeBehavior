@@ -7,11 +7,15 @@ public enum UnitType
     Abejas,
     Avispas,
     Flor,
+    polen,
+    carne,
     nulo
 }
 
 public class Health : MonoBehaviour
 {
+    [Header("Health")]
+
     public Transform Hogar;
     public int life;
     public int lifeMax;
@@ -19,10 +23,8 @@ public class Health : MonoBehaviour
     public SpriteRenderer ElSprite;
     public UnitType MyUnitType;
 
-
     public UnitType ElTipoDeEnemigo;
     public UnitType ElTipoDeHuida;
-
     public bool Imortal = false;
     public bool IsDead
     {

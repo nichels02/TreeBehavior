@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemCarne : item
 {
-
+    
     [SerializeField] int Vida;
     [SerializeField] int hambre;
 

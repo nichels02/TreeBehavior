@@ -16,8 +16,10 @@ public class Colmena : MonoBehaviour
 
     Action<Vector2> LLamarALasGuerreras;
 
-    GameObject Recolectora;
-    GameObject Guerrera;
+    [SerializeField] GameObject Recolectora;
+    [SerializeField] GameObject Guerrera;
+
+    [SerializeField] ItemSpawner ElItemSpawner;
 
 
     private void Start()
@@ -46,13 +48,16 @@ public class Colmena : MonoBehaviour
     }
 
 
-    public void murioUnaAbeja()
+    public void murioUnaAbeja(Vector3 x)
     {
         CantidadDeRecolectoras -= 1;
+        ElItemSpawner.GenerarCarne(x);
+
     }
-    public void murioUnaAbejaGuerrera()
+    public void murioUnaAbejaGuerrera(Vector3 x)
     {
         CantidadDeGuerreras -= 1;
+        ElItemSpawner.GenerarCarne(x);
     }
 
 
