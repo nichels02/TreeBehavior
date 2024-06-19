@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class IACharacterActionLandBeeRecolector : IACharacterActionLandAtack
 {
-    public override void Gather()
+    public virtual void Gather()
     {
-        base.Gather();
+
     }
-    public override void Warn()
+    public virtual void Warn()
     {
-        base.Warn();
+        atack();
     }
 
     public override void atack()

@@ -29,13 +29,5 @@ public class IACharacterActionLand : IACharacterAction
     {
 
     }
-    public virtual void Warn()
-    {
-
-    }
-    public virtual void Gather()
-    {
-
-    }
     #endregion
 }
