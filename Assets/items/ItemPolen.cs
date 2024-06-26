@@ -5,11 +5,11 @@ using UnityEngine;
 public class ItemPolen : item
 {
     [SerializeField] int Recoleccion;
-    public override void AlColicionar(Health health)
+    public override void AlColicionar(Health Health)
     {
-        if (health is HealthBee)
+        if (Health is HealthBee)
         {
-            ((HealthBee)health).RecoleccionActual = ((HealthBee)health).RecoleccionActual + Recoleccion <= 100 ? 100 : ((HealthBee)health).RecoleccionActual + Recoleccion;
+            ((HealthBee)Health).RecoleccionActual = ((HealthBee)Health).RecoleccionActual + Recoleccion <= 100 ? 100 : ((HealthBee)Health).RecoleccionActual + Recoleccion;
             Destroy(gameObject);
         }
     }

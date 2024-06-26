@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class IACharacterVehicleLandWasp : IACharacterVehicleLandWander
 {
+    private void Start()
+    {
+        LoadComponent();
+    }
     public override void LoadComponent()
     {
         base.LoadComponent();

@@ -16,7 +16,7 @@ public class ActionNotRangeAttack : ActionNodeAction
     {
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health.IsDead)
+            if (_IACharacterVehicle._health.IsDead)
             {
                 return TaskStatus.Failure;
             }

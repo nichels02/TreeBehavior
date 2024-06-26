@@ -16,7 +16,7 @@ public class ActionNotRangeHome : ActionNodeAction
     {
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health.IsDead)
+            if (_IACharacterVehicle._health.IsDead)
             {
                 return TaskStatus.Failure;
             }
@@ -26,7 +26,7 @@ public class ActionNotRangeHome : ActionNodeAction
 
         if (_IACharacterVehicle != null)
         {
-            if (Vector3.Distance(_IACharacterVehicle.health.Hogar.position, _IACharacterVehicle.gameObject.transform.position) > _IACharacterVehicle.agent.stoppingDistance)
+            if (Vector3.Distance(_IACharacterVehicle._health.Hogar.position, _IACharacterVehicle.gameObject.transform.position) > _IACharacterVehicle.agent.stoppingDistance)
             {
                 return TaskStatus.Success;
             }

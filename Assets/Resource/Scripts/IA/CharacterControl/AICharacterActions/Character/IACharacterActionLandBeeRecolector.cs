@@ -20,9 +20,9 @@ public class IACharacterActionLandBeeRecolector : IACharacterActionLandAtack
 
     protected override void LoMataste()
     {
-        if (health is HealthBee)
+        if (_health is HealthBee)
         {
-            ((HealthBee)health).RecoleccionActual += 40;
+            ((HealthBee)_health).RecoleccionActual += 40;
         }
     }
 }

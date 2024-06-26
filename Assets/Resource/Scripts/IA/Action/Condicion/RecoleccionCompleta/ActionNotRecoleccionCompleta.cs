@@ -16,14 +16,14 @@ public class ActionNotRecoleccionCompleta : ActionNodeAction
     {
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health.IsDead)
+            if (_IACharacterVehicle._health.IsDead)
             {
                 return TaskStatus.Failure;
             }
         }
         else if (_IACharacterAction != null)
         {
-            if (_IACharacterAction.health.IsDead)
+            if (_IACharacterAction._health.IsDead)
             {
                 return TaskStatus.Failure;
             }
@@ -31,9 +31,9 @@ public class ActionNotRecoleccionCompleta : ActionNodeAction
 
         if (_IACharacterVehicle != null)
         {
-            if(_IACharacterVehicle.health is HealthBee)
+            if(_IACharacterVehicle._health is HealthBee)
             {
-                if(((HealthBee)_IACharacterVehicle.health).RecoleccionActual <= ((HealthBee)_IACharacterVehicle.health).RecoleccionMaxima)
+                if(((HealthBee)_IACharacterVehicle._health).RecoleccionActual <= ((HealthBee)_IACharacterVehicle._health).RecoleccionMaxima)
                 {
                     return TaskStatus.Success;
                 }
@@ -41,9 +41,9 @@ public class ActionNotRecoleccionCompleta : ActionNodeAction
         }
         else if (_IACharacterAction != null)
         {
-            if (_IACharacterAction.health is HealthBee)
+            if (_IACharacterAction._health is HealthBee)
             {
-                if (((HealthBee)_IACharacterAction.health).RecoleccionActual <= ((HealthBee)_IACharacterAction.health).RecoleccionMaxima)
+                if (((HealthBee)_IACharacterAction._health).RecoleccionActual <= ((HealthBee)_IACharacterAction._health).RecoleccionMaxima)
                 {
                     return TaskStatus.Success;
                 }

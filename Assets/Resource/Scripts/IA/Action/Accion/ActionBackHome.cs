@@ -14,14 +14,14 @@ public class ActionBackHome : ActionNodeAction
     }
     public override TaskStatus OnUpdate()
     {
-        if (_IACharacterVehicle.health.IsDead)
+        if (_IACharacterVehicle._health.IsDead)
         {
             return TaskStatus.Failure;
         }
         
-        if(_IACharacterVehicle.agent!= _IACharacterVehicle.health.Hogar)
+        if(_IACharacterVehicle.agent!= _IACharacterVehicle._health.Hogar)
         {
-            _IACharacterVehicle.MoveToPosition(_IACharacterVehicle.health.Hogar.position);
+            _IACharacterVehicle.MoveToPosition(_IACharacterVehicle._health.Hogar.position);
             return TaskStatus.Success;
         }
         else

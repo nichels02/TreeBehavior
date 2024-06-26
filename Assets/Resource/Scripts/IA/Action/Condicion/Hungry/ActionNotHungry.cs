@@ -16,7 +16,7 @@ public class ActionNotHungry : ActionNodeAction
     {
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health.IsDead)
+            if (_IACharacterVehicle._health.IsDead)
             {
                 return TaskStatus.Failure;
             }
@@ -26,9 +26,9 @@ public class ActionNotHungry : ActionNodeAction
 
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health is HealthAvispa)
+            if (_IACharacterVehicle._health is HealthAvispa)
             {
-                if (((HealthAvispa)_IACharacterVehicle.health).hambre >= 70)
+                if (((HealthAvispa)_IACharacterVehicle._health).hambre >= 70)
                 {
                     return TaskStatus.Success;
                 }
@@ -48,9 +48,9 @@ public class ActionNotHungry : ActionNodeAction
 
         else if (_IACharacterAction != null)
         {
-            if (_IACharacterAction.health is HealthAvispa)
+            if (_IACharacterAction._health is HealthAvispa)
             {
-                if (((HealthAvispa)_IACharacterAction.health).hambre >= 70)
+                if (((HealthAvispa)_IACharacterAction._health).hambre >= 70)
                 {
                     return TaskStatus.Success;
                 }

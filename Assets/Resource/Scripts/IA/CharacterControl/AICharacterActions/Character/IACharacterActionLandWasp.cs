@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class IACharacterActionLandWasp : IACharacterActionLandAtack
 {
+    private void Start()
+    {
+        LoadComponent();
+    }
+    public override void LoadComponent()
+    {
+        base.LoadComponent();
+    }
     public override void atack()
     {
         base.atack();
@@ -12,9 +20,9 @@ public class IACharacterActionLandWasp : IACharacterActionLandAtack
 
     protected override void LoMataste()
     {
-        if (health is HealthAvispa)
+        if (_health is HealthAvispa)
         {
-            ((HealthAvispa)health).hambre += 40;
+            ((HealthAvispa)_health).hambre += 40;
         }
     }
 }

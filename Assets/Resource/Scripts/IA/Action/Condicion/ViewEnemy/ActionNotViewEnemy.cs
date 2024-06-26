@@ -16,7 +16,7 @@ public class ActionNotViewEnemy : ActionNodeAction
     {
         if (_IACharacterVehicle != null)
         {
-            if (_IACharacterVehicle.health.IsDead)
+            if (_IACharacterVehicle._health.IsDead)
             {
                 return TaskStatus.Failure;
             }
@@ -27,7 +27,7 @@ public class ActionNotViewEnemy : ActionNodeAction
             {
                 return TaskStatus.Success;
             }
-            else if (_IACharacterVehicle.health.ElTipoDeEnemigo != _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
+            else if (_IACharacterVehicle._health.ElTipoDeEnemigo != _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
             {
                 return TaskStatus.Failure;
             }
@@ -38,7 +38,7 @@ public class ActionNotViewEnemy : ActionNodeAction
             {
                 return TaskStatus.Success;
             }
-            else if (_IACharacterAction.health.ElTipoDeEnemigo != _IACharacterAction._AIVision.EnemyView.MyUnitType)
+            else if (_IACharacterAction._health.ElTipoDeEnemigo != _IACharacterAction._AIVision.EnemyView.MyUnitType)
             {
                 return TaskStatus.Failure;
             }

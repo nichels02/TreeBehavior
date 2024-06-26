@@ -15,7 +15,7 @@ public class ActionWander : ActionNodeAction
 
     public override TaskStatus OnUpdate()
     {
-        if (_IACharacterVehicle.health.IsDead)
+        if (_IACharacterVehicle._health.IsDead)
         {
             return TaskStatus.Failure;
         }

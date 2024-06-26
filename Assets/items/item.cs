@@ -5,5 +5,5 @@ using UnityEngine;
 public abstract class item : MonoBehaviour
 {
     public UnitType MyUnitTypeObject;
-    public abstract void AlColicionar(Health health);
+    public abstract void AlColicionar(Health Health);
 }

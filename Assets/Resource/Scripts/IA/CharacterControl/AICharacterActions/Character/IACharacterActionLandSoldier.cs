@@ -23,9 +23,9 @@ public class IACharacterActionLandSoldier : IACharacterActionLandAtack
 
     protected override void LoMataste()
     {
-        //if (health is HealthAvispa)
+        //if (Health is HealthAvispa)
         //{
-        //    ((HealthAvispa)health).hambre += 40;
+        //    ((HealthAvispa)Health).hambre += 40;
         //}
     }
 }

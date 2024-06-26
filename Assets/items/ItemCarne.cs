@@ -10,14 +10,14 @@ public class ItemCarne : item
 
 
 
-    public override void AlColicionar(Health health)
+    public override void AlColicionar(Health Health)
     {
         
 
-        if(health is HealthAvispa)
+        if(Health is HealthAvispa)
         {
-            ((HealthAvispa)health).hambre = ((HealthAvispa)health).hambre + hambre <= 100 ? 100 : ((HealthAvispa)health).hambre + hambre;
-            ((HealthAvispa)health).life = ((HealthAvispa)health).life + Vida <= 100 ? 100 : ((HealthAvispa)health).life + Vida;
+            ((HealthAvispa)Health).hambre = ((HealthAvispa)Health).hambre + hambre <= 100 ? 100 : ((HealthAvispa)Health).hambre + hambre;
+            ((HealthAvispa)Health).life = ((HealthAvispa)Health).life + Vida <= 100 ? 100 : ((HealthAvispa)Health).life + Vida;
             Destroy(gameObject);
         }
 

@@ -236,11 +236,11 @@ public class VisionSensor : MonoBehaviour
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
-            Health Health = targetsInViewRadius[i].GetComponent<Health>();
+            Health _health = targetsInViewRadius[i].GetComponent<Health>();
 
-            if (Health != null && MainVision.IsInSight(Health.AimOffset) && Health.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
+            if (_health != null && MainVision.IsInSight(_health.AimOffset) && _health.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
             {
-                EnemyView = Health;
+                EnemyView = _health;
             }
         }
     }

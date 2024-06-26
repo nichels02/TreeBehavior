@@ -14,11 +14,11 @@ public class ActionViewEnemy : ActionNodeAction
     }
     public override TaskStatus OnUpdate()
     {
-        if (_IACharacterVehicle != null && _IACharacterVehicle.health.IsDead)
+        if (_IACharacterVehicle != null && _IACharacterVehicle._health.IsDead)
         {
             return TaskStatus.Failure;
         }
-        else if (_IACharacterAction != null && _IACharacterAction.health.IsDead)
+        else if (_IACharacterAction != null && _IACharacterAction._health.IsDead)
         {
             return TaskStatus.Failure;
         }
@@ -26,7 +26,7 @@ public class ActionViewEnemy : ActionNodeAction
         {
             if (_IACharacterVehicle._AIVision.EnemyView != null)
             {
-                if(_IACharacterVehicle.health.ElTipoDeEnemigo == _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
+                if(_IACharacterVehicle._health.ElTipoDeEnemigo == _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
                 {
                     return TaskStatus.Success;
                 }
@@ -36,7 +36,7 @@ public class ActionViewEnemy : ActionNodeAction
         {
             if (_IACharacterAction._AIVision.EnemyView != null)
             {
-                if (_IACharacterAction.health.ElTipoDeEnemigo == _IACharacterAction._AIVision.EnemyView.MyUnitType)
+                if (_IACharacterAction._health.ElTipoDeEnemigo == _IACharacterAction._AIVision.EnemyView.MyUnitType)
                 {
                     return TaskStatus.Success;
                 }

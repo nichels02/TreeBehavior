@@ -16,7 +16,7 @@ public class ActionAttack : ActionNodeAction
     }
     public override TaskStatus OnUpdate()
     {
-        if (_IACharacterVehicle.health.IsDead || _IACharacterAction.health.IsDead)
+        if (_IACharacterVehicle._health.IsDead || _IACharacterAction._health.IsDead)
         {
             return TaskStatus.Failure;
         }

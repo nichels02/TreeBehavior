@@ -42,24 +42,24 @@ public class VisionSensorBee : VisionSensor
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
-            Health Health = targetsInViewRadius[i].GetComponent<Health>();
+            Health _health = targetsInViewRadius[i].GetComponent<Health>();
 
-            if (Health != null && MainVision.IsInSight(Health.AimOffset) && Health.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
+            if (_health != null && MainVision.IsInSight(_health.AimOffset) && _health.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
             {
-                if (Health.MyUnitType == UnitType.Flor)
+                if (_health.MyUnitType == UnitType.Flor)
                 {
-                    ResourceView = Health;
+                    ResourceView = _health;
                 }
                 else
-                if (Health.MyUnitType == UnitType.Avispas)
+                if (_health.MyUnitType == UnitType.Avispas)
                 {
 
-                    EnemyView = Health;
+                    EnemyView = _health;
                 }
                 else
-                if (Health.MyUnitType == UnitType.Abejas)
+                if (_health.MyUnitType == UnitType.Abejas)
                 {
-                    AlliedView = Health;
+                    AlliedView = _health;
                 }
             }
         }
