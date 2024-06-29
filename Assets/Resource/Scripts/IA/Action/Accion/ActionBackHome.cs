@@ -21,7 +21,7 @@ public class ActionBackHome : ActionNodeAction
         
         if(_IACharacterVehicle.agent!= _IACharacterVehicle._health.Hogar)
         {
-            _IACharacterVehicle.MoveToPosition(_IACharacterVehicle._health.Hogar.position);
+            _IACharacterVehicle.MoveToPosition(_IACharacterVehicle._health.Hogar.position, _IACharacterVehicle._health.VelocidadMax / 2);
             return TaskStatus.Success;
         }
         else

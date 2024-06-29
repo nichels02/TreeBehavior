@@ -12,9 +12,9 @@ public class IACharacterVehicleLandBeeExplorer : IACharacterVehicleLandWander
     {
         base.LoadComponent();
     }
-    public override void MoveToPosition(Vector3 position)
+    public override void MoveToPosition(Vector3 position, float velocidad)
     {
-        base.MoveToPosition(position);
+        base.MoveToPosition(position, velocidad);
     }
     public override void Wander()
     {
@@ -46,7 +46,7 @@ public class IACharacterVehicleLandBeeExplorer : IACharacterVehicleLandWander
 
         Vector3 X = (DireccionOpuesta + PosicionActual) / 2;
 
-        MoveToPosition(X);
+        MoveToPosition(X, health.VelocidadMax / 2);
 
     }
 }

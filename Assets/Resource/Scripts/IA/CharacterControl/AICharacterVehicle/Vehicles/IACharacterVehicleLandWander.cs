@@ -10,9 +10,9 @@ public class IACharacterVehicleLandWander : IACharacterVehicleLand
     {
         base.LoadComponent();
     }
-    public override void MoveToPosition(Vector3 position)
+    public override void MoveToPosition(Vector3 position, float velocity)
     {
-        base.MoveToPosition(position);
+        base.MoveToPosition(position, velocity);
     }
 
     public override void Wander()
@@ -22,7 +22,7 @@ public class IACharacterVehicleLandWander : IACharacterVehicleLand
             x = Random.RandomRange(LimiteMin.x, LimiteMax.x) + transform.position.x,
             z = Random.RandomRange(LimiteMin.y, LimiteMax.y) + transform.position.z
         };
-        MoveToPosition(i);
+        MoveToPosition(i, health.VelocidadMax/2);
     }
     /*
     public override void Wander()

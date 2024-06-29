@@ -11,9 +11,9 @@ public class IACharacterVehicleLandBeeSoldier : IACharacterVehicleLand
         base.LoadComponent();
     }
 
-    public override void MoveToPosition(Vector3 position)
+    public override void MoveToPosition(Vector3 position, float Velocity)
     {
-        base.MoveToPosition(position);
+        base.MoveToPosition(position, Velocity);
     }
 
     public override void CalcularDireccion()
@@ -42,7 +42,7 @@ public class IACharacterVehicleLandBeeSoldier : IACharacterVehicleLand
         {
             index += 1;
         }
-        MoveToPosition(ListaDePatrullaje[index]);
+        MoveToPosition(ListaDePatrullaje[index], health.VelocidadMax / 2);
     }
 
 }

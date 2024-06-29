@@ -18,6 +18,8 @@ public class IACharacterActionLandWasp : IACharacterActionLandAtack
         base.atack();
     }
 
+    
+
     protected override void LoMataste()
     {
         if (_health is HealthAvispa)

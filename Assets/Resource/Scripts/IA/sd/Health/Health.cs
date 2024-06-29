@@ -25,7 +25,11 @@ public class Health : MonoBehaviour
 
     public UnitType ElTipoDeEnemigo;
     public UnitType ElTipoDeHuida;
+    public UnitType ItemRecolectar;
     public bool Imortal = false;
+
+    public float VelocidadMax;
+    public float Velocidad;
     public bool IsDead
     {
         get => life == 0;
@@ -34,6 +38,7 @@ public class Health : MonoBehaviour
     public virtual void LoadComponent()
     {
         life = lifeMax;
+        Velocidad = VelocidadMax;
     }
     public virtual bool Damage(int damage, Health healt)
     {

@@ -30,7 +30,7 @@ public class IACharacterVehicle : IACharacterControl
     {
         
     }
-    public virtual void MoveToPosition(Vector3 position)
+    public virtual void MoveToPosition(Vector3 position, float velocity)
     {
 
     }

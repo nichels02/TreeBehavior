@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class MovimientoCamara : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 5f; // Velocidad de movimiento del objeto
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Movimiento en los ejes X y Z
+        float moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float moveZ = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+
+        // Debug para verificar valores
+        Debug.Log("moveX: " + moveX + " moveZ: " + moveZ);
+
+        // Aplicar movimiento al objeto
+        transform.Translate(new Vector3(moveX, moveZ, 0f));
     }
 }

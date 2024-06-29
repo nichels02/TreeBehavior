@@ -70,11 +70,15 @@ public class IACharacterVehicleLand : IACharacterVehicle{
         if (_AIVision.EnemyView == null)
             return;
         ViewToEnemy();
-        MoveToPosition(_AIVision.EnemyView.transform.position);
+
+
+
+        MoveToPosition(_AIVision.EnemyView.transform.position, health.Velocidad);
     }
 
-    public override void MoveToPosition(Vector3 position)
+    public override void MoveToPosition(Vector3 position, float velocity)
     {
+        agent.speed = velocity;
         agent.SetDestination(position);
 
         //if (this.agent.remainingDistance > this.agent.stoppingDistance)
