@@ -190,7 +190,7 @@ MonoBehaviour:
   AlliedView: {fileID: 0}
   ScanLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 951
   randomWaitScandMin: 1
   randomWaitScandMax: 1
   MainVisionAttack:

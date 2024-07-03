@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class HealthFlor : Health
 {
-    [SerializeField] ItemSpawner ElSpawner;
+    public ItemSpawner ElSpawner;
     private void Start()
     {
         LoadComponent();

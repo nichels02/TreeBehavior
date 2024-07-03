@@ -26,25 +26,25 @@ MonoBehaviour:
         Back Home","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-833.5103,156.742447)"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNotHungry","NodeData":{"Offset":"(-142.5,112.5)"},"ID":8,"Name":"Action
         Not Hungry","Instant":true},{"Type":"ActionRangeHome","NodeData":{"Offset":"(-4.4685955,114.032448)"},"ID":9,"Name":"Action
         Range Home","Instant":true},{"Type":"ActionQuieto","NodeData":{"Offset":"(130.868774,108.837067)"},"ID":10,"Name":"Action
-        Quieto","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-228.06958,156.24884)"},"ID":11,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNotViewEnemy","NodeData":{"Offset":"(-307.298737,121.667236)"},"ID":12,"Name":"Action
-        Not View Enemy","Instant":true},{"Type":"ActionNotViewItem","NodeData":{"Offset":"(-146.580231,116.955826)"},"ID":13,"Name":"Action
-        Not View Item","Instant":true},{"Type":"ActionHungry","NodeData":{"Offset":"(1.95556641,115.504059)"},"ID":14,"Name":"Action
-        Hungry","Instant":true},{"Type":"ActionWander","NodeData":{"Offset":"(106.965942,122.616638)"},"ID":15,"Name":"Action
-        Wander","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(330.031158,160)"},"ID":16,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewEnemy","NodeData":{"Offset":"(-311.636627,122.791992)"},"ID":17,"Name":"Action
-        View Enemy","Instant":true},{"Type":"ActionNotViewItem","NodeData":{"Offset":"(-161.739014,130.000076)"},"ID":18,"Name":"Action
-        Not View Item","Instant":true},{"Type":"ActionNotRangeAttack","NodeData":{"Offset":"(2.899969,118.355713)"},"ID":19,"Name":"Action
-        Not Range Attack","Instant":true},{"Type":"ActionFollowEnemy","NodeData":{"Offset":"(162.048981,123.613037)"},"ID":20,"Name":"Action
-        Follow Enemy","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(854.138,160)"},"ID":21,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewEnemy","NodeData":{"Offset":"(-184.00351,121.262024)"},"ID":22,"Name":"Action
-        View Enemy","Instant":true},{"Type":"ActionNotViewItem","NodeData":{"Offset":"(-32.0233154,129.130646)"},"ID":23,"Name":"Action
-        Not View Item","Instant":true},{"Type":"ActionRangeAttack","NodeData":{"Offset":"(122.073669,116.411255)"},"ID":24,"Name":"Action
-        Range Attack","Instant":true},{"Type":"ActionAttack","NodeData":{"Offset":"(246.973755,121.098755)"},"ID":25,"Name":"Action
-        Attack","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1375.15063,170)"},"ID":26,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewItem","NodeData":{"Offset":"(-138.312714,121.556488)"},"ID":27,"Name":"Action
-        View Item","Instant":true},{"Type":"ActionNotRangeItem","NodeData":{"Offset":"(7.44491863,115.49588)"},"ID":28,"Name":"Action
-        Not Range Item","Instant":true},{"Type":"ActionFollowItem","NodeData":{"Offset":"(174.11145,121.556641)"},"ID":29,"Name":"Action
-        Follow Item","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1886.96167,164.84848)"},"ID":30,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewItem","NodeData":{"Offset":"(-182.614258,139.52652)"},"ID":31,"Name":"Action
-        View Item","Instant":true},{"Type":"ActionRangeItem","NodeData":{"Offset":"(-16.8057842,135.012939)"},"ID":32,"Name":"Action
-        Range Item","Instant":true},{"Type":"ActionRecogerItem","NodeData":{"Offset":"(137.881836,141.262939)"},"ID":33,"Name":"Action
-        Recoger Item","Instant":true}]}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceAtack","IsShared":true,"SinglemValue":7.26}]}'
+        Quieto","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-432.5423,139.23056)"},"ID":11,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewItem","NodeData":{"Offset":"(-138.312714,121.556488)"},"ID":12,"Name":"Action
+        View Item","Instant":true},{"Type":"ActionNotRangeItem","NodeData":{"Offset":"(7.44491863,115.49588)"},"ID":13,"Name":"Action
+        Not Range Item","Instant":true},{"Type":"ActionFollowItem","NodeData":{"Offset":"(174.11145,121.556641)"},"ID":14,"Name":"Action
+        Follow Item","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(62.96189,164.848465)"},"ID":15,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewItem","NodeData":{"Offset":"(-182.614258,139.52652)"},"ID":16,"Name":"Action
+        View Item","Instant":true},{"Type":"ActionRangeItem","NodeData":{"Offset":"(-16.8057842,135.012939)"},"ID":17,"Name":"Action
+        Range Item","Instant":true},{"Type":"ActionRecogerItem","NodeData":{"Offset":"(137.881836,141.262939)"},"ID":18,"Name":"Action
+        Recoger Item","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(731.930054,176.248825)"},"ID":19,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNotViewEnemy","NodeData":{"Offset":"(-307.298737,121.667236)"},"ID":20,"Name":"Action
+        Not View Enemy","Instant":true},{"Type":"ActionNotViewItem","NodeData":{"Offset":"(-146.580231,116.955826)"},"ID":21,"Name":"Action
+        Not View Item","Instant":true},{"Type":"ActionHungry","NodeData":{"Offset":"(1.95556641,115.504059)"},"ID":22,"Name":"Action
+        Hungry","Instant":true},{"Type":"ActionWander","NodeData":{"Offset":"(106.965942,122.616638)"},"ID":23,"Name":"Action
+        Wander","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1280.031,160)"},"ID":24,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewEnemy","NodeData":{"Offset":"(-311.636627,122.791992)"},"ID":25,"Name":"Action
+        View Enemy","Instant":true},{"Type":"ActionNotViewItem","NodeData":{"Offset":"(-161.739014,130.000076)"},"ID":26,"Name":"Action
+        Not View Item","Instant":true},{"Type":"ActionNotRangeAttack","NodeData":{"Offset":"(2.899969,118.355713)"},"ID":27,"Name":"Action
+        Not Range Attack","Instant":true},{"Type":"ActionFollowEnemy","NodeData":{"Offset":"(162.048981,123.613037)"},"ID":28,"Name":"Action
+        Follow Enemy","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1782.138,160)"},"ID":29,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionViewEnemy","NodeData":{"Offset":"(-184.00351,121.262024)"},"ID":30,"Name":"Action
+        View Enemy","Instant":true},{"Type":"ActionNotViewItem","NodeData":{"Offset":"(-32.0233154,129.130646)"},"ID":31,"Name":"Action
+        Not View Item","Instant":true},{"Type":"ActionRangeAttack","NodeData":{"Offset":"(122.073669,116.411255)"},"ID":32,"Name":"Action
+        Range Attack","Instant":true},{"Type":"ActionAttack","NodeData":{"Offset":"(246.973755,121.098755)"},"ID":33,"Name":"Action
+        Attack","Instant":true}]}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceAtack","IsShared":true,"SinglemValue":7.26}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 

@@ -25,6 +25,14 @@ public class Colmena : MonoBehaviour
     private void Start()
     {
         StartCoroutine(ReducirRecursos());
+        for(int i = 0; i < 2; i++)
+        {
+            GenerarRecolectora();
+        }
+        for (int i = 0; i < 2; i++)
+        {
+            GenerarGuerrera();
+        }
     }
     private void Update()
     {
@@ -32,12 +40,15 @@ public class Colmena : MonoBehaviour
         {
             if (CantidadDeRecolectoras < 10)
             {
+                recursos -= recursosMin;
                 GenerarRecolectora();
             }
             if (CantidadDeGuerreras < 10)
             {
+                recursos -= recursosMin;
                 GenerarGuerrera();
             }
+            
         }
         
     }
@@ -63,11 +74,19 @@ public class Colmena : MonoBehaviour
 
     public void GenerarRecolectora()
     {
-
+        Vector3 x = new Vector3(UnityEngine.Random.Range(-10, 10), 0, UnityEngine.Random.Range(-10, 10));
+        GameObject LaRecolectora = Instantiate(Recolectora, transform.position+ x, Quaternion.identity);
+        LaRecolectora.GetComponent<Health>().LaColmena = this;
+        LaRecolectora.GetComponent<Health>().Hogar = transform;
     }
     public void GenerarGuerrera()
     {
+        Vector3 x = new Vector3(UnityEngine.Random.Range(-10, 10), 0, UnityEngine.Random.Range(-10, 10));
+        GameObject LaRecolectora = Instantiate(Guerrera, transform.position + x, Quaternion.identity);
+        LaRecolectora.GetComponent<Health>().LaColmena = this;
+        LaRecolectora.GetComponent<Health>().Hogar = transform;
 
+        LLamarALasGuerreras += LaRecolectora.GetComponent<HealthSoldier>().advertir;
     }
 
 

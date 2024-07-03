@@ -27,7 +27,7 @@ public class ActionNotViewEnemy : ActionNodeAction
             {
                 return TaskStatus.Success;
             }
-            else if (_IACharacterVehicle._health.ElTipoDeEnemigo != _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
+            else if (_IACharacterVehicle._health.ElTipoDeEnemigo == _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
             {
                 return TaskStatus.Failure;
             }

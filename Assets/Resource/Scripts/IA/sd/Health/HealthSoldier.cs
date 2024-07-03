@@ -11,7 +11,6 @@ public class HealthSoldier : Health
     private void Start()
     {
         LoadComponent();
-        LaColmena.LLamarALasGuerreras += advertir;
 
     }
     public void advertir(Vector3 x)

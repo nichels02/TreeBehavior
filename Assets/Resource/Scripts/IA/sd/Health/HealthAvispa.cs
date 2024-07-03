@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class HealthAvispa : Health
 {
+    public ColmenaAvispa LaColmenaAvispa;
     public int hambre=50;
     public int hambreMax=100;
 

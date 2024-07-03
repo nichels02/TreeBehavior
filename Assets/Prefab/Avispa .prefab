@@ -537,7 +537,7 @@ MonoBehaviour:
   AlliedView: {fileID: 0}
   ScanLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   randomWaitScandMin: 1
   randomWaitScandMax: 1
   MainVisionAttack:
@@ -584,6 +584,7 @@ MonoBehaviour:
   VelocidadMax: 5
   Velocidad: 0
   PosicionDondeAtacaron: {x: 0, y: 0, z: 0}
+  LaColmenaAvispa: {fileID: 0}
   hambre: 70
   hambreMax: 100
 --- !u!114 &6055797215382440680
