@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
 {
     [Header("Health")]
 
+    public Colmena LaColmena;
     public Transform Hogar;
     public int life;
     public int lifeMax;
@@ -27,9 +28,13 @@ public class Health : MonoBehaviour
     public UnitType ElTipoDeHuida;
     public UnitType ItemRecolectar;
     public bool Imortal = false;
+    public bool FueAtacado = false;
 
     public float VelocidadMax;
     public float Velocidad;
+
+    public Vector3 PosicionDondeAtacaron;
+
     public bool IsDead
     {
         get => life == 0;
@@ -43,7 +48,8 @@ public class Health : MonoBehaviour
     public virtual bool Damage(int damage, Health healt)
     {
         if (Imortal) return false;
-
+        FueAtacado = true;
+        PosicionDondeAtacaron = healt.transform.position;
         if ((life - damage) > 0)
         {
             life -= damage;
@@ -57,7 +63,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    
+
     IEnumerator CambiarColor()
     {
         Color ELColor = ElSprite.color;

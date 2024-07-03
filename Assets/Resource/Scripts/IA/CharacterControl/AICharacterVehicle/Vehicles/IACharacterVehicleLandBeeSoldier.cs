@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class IACharacterVehicleLandBeeSoldier : IACharacterVehicleLand
 {
-    [SerializeField] Vector2[] ListaDePatrullaje = new Vector2[1];
+    [SerializeField] Vector3[] ListaDePatrullaje = new Vector3[1];
     int index;
+    private void Start()
+    {
+        LoadComponent();
+    }
     public override void LoadComponent()
     {
         base.LoadComponent();
+    }
+
+    public override void MoveToEnemy()
+    {
+        if (_AIVision.EnemyView == null)
+            return;
+        ViewToEnemy();
+
+        MoveToPosition(_AIVision.EnemyView.transform.position, health.VelocidadMax / 2);
     }
 
     public override void MoveToPosition(Vector3 position, float Velocity)

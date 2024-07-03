@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[TaskCategory("IA SC/NodoDeCondicion/RecoleccionCompleta")]
+[TaskCategory("IA SC/NodoDeAccion")]
 //NodoDeAccion
 //NodoDeCondicion
-public class ActionNotRecoleccionCompleta : ActionNodeAction
+public class ActionDejarDeEstarAdvertido : ActionNodeAction
 {
     public override void OnStart()
     {
@@ -32,20 +32,22 @@ public class ActionNotRecoleccionCompleta : ActionNodeAction
 
         if (_IACharacterVehicle != null)
         {
-            if(_IACharacterVehicle._health is HealthBee)
+            if (_IACharacterVehicle._health is HealthSoldier)
             {
-                if(((HealthBee)_IACharacterVehicle._health).RecoleccionActual <= ((HealthBee)_IACharacterVehicle._health).RecoleccionMaxima)
+                if (((HealthSoldier)_IACharacterVehicle._health).fueAdvertido)
                 {
+                    ((HealthSoldier)_IACharacterVehicle._health).fueAdvertido = false;
                     return TaskStatus.Success;
                 }
             }
         }
         else if (_IACharacterAction != null)
         {
-            if (_IACharacterAction._health is HealthBee)
+            if (_IACharacterAction._health is HealthSoldier)
             {
-                if (((HealthBee)_IACharacterAction._health).RecoleccionActual <= ((HealthBee)_IACharacterAction._health).RecoleccionMaxima)
+                if (((HealthSoldier)_IACharacterAction._health).fueAdvertido)
                 {
+                    ((HealthSoldier)_IACharacterAction._health).fueAdvertido = false;
                     return TaskStatus.Success;
                 }
             }

@@ -40,11 +40,12 @@ public class IACharacterVehicleLandBeeExplorer : IACharacterVehicleLandWander
     public virtual void Evade(Vector3 PosicionEvadir, Vector3 PosicionActual, Vector3 PosicionDeseada)
     {
         float Distancia = Vector3.Distance(PosicionDeseada, PosicionActual);
-        Distancia = Distancia > 5 ? Distancia : 6;
+        Distancia = Distancia > 20 ? Distancia : 20;
         Vector3 DireccionOpuesta = (PosicionActual - PosicionEvadir).normalized;
         DireccionOpuesta = PosicionActual + DireccionOpuesta * Distancia;
 
-        Vector3 X = (DireccionOpuesta + PosicionActual) / 2;
+        //Vector3 X = (DireccionOpuesta + PosicionActual) / 2;
+        Vector3 X = DireccionOpuesta;
 
         MoveToPosition(X, health.VelocidadMax / 2);
 

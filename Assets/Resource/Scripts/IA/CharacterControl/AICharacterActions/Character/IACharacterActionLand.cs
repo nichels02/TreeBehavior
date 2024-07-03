@@ -29,9 +29,5 @@ public class IACharacterActionLand : IACharacterAction
     {
 
     }
-    public virtual void RecogerItem()
-    {
-        ((VisionSensorAttack)AIVision).ElItemAtaque.AlColicionar(health);
-    }
     #endregion
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 [TaskCategory("IA SC/NodoDeAccion")]
 //NodoDeAccion
 //NodoDeCondicion
-public class ActionPatrullar : ActionNodeAction
+public class ActionFollowItem : ActionNodeAction
 {
     public override void OnStart()
     {
@@ -19,11 +19,11 @@ public class ActionPatrullar : ActionNodeAction
         {
             return TaskStatus.Failure;
         }
-        if (_IACharacterVehicle is IACharacterVehicleLandBeeSoldier)
+        if (((VisionSensorAttack)_IACharacterVehicle._AIVision).ElItem != null)
         {
-            if (_IACharacterVehicle.agent.remainingDistance <= _IACharacterVehicle.agent.stoppingDistance || _IACharacterVehicle.agent.destination == null)
+            if (((VisionSensorAttack)_IACharacterVehicle._AIVision).ElItem.MyUnitTypeObject == _IACharacterVehicle._health.ItemRecolectar)
             {
-                ((IACharacterVehicleLandBeeSoldier)_IACharacterVehicle).Patrullaje();
+                _IACharacterVehicle.MoveToPosition(((VisionSensorAttack)_IACharacterVehicle._AIVision).ElItem.transform.position, _IACharacterVehicle._health.VelocidadMax / 2);
                 return TaskStatus.Success;
             }
             else

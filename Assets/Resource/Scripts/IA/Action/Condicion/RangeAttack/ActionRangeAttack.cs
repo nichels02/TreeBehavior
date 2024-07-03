@@ -30,7 +30,14 @@ public class ActionRangeAttack : ActionNodeAction
                 {
                     if(((VisionSensorAttack)_IACharacterVehicle._AIVision).HealthAtaque != null)
                     {
-                        return TaskStatus.Success;
+                        if (_IACharacterVehicle._health.ElTipoDeEnemigo == ((VisionSensorAttack)_IACharacterVehicle._AIVision).HealthAtaque.MyUnitType)
+                        {
+                            return TaskStatus.Success;
+                        }
+                        else
+                        {
+                            return TaskStatus.Failure;
+                        }
                     }
                     else
                     {

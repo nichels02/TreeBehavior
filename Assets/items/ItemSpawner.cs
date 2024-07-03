@@ -13,8 +13,8 @@ public class ItemSpawner : MonoBehaviour
     {
         for(int i  = 0; i < 3; i++)
         {
-            float x = Random.Range(-2, 2);
-            float z = Random.Range(-2, 2);
+            float x = Random.Range(-5, 5);
+            float z = Random.Range(-5, 5);
             Vector3 PosicionRandom = new Vector3(x + posicionCentral.x, posicionCentral.y, posicionCentral.z + z);
             Instantiate(ElItemPolen, PosicionRandom, Quaternion.identity);
 

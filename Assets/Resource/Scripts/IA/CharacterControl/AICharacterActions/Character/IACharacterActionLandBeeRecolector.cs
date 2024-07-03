@@ -12,6 +12,15 @@ public class IACharacterActionLandBeeRecolector : IACharacterActionLandAtack
     {
         atack();
     }
+    public virtual void LlamarALosGuerreros(Vector2 x)
+    {
+        health.LaColmena.AvisarGuerreras(x);
+    }
+    public virtual void Almacenar()
+    {
+        health.LaColmena.recursos += ((HealthBee)health).RecoleccionActual;
+        ((HealthBee)health).RecoleccionActual = 0;
+    }
 
     public override void atack()
     {

@@ -41,13 +41,13 @@ public class IACharacterVehicleLandWasp : IACharacterVehicleLandWander
 
         #region Hambre
         hambre_Bajo = Math.Max(0, Math.Min(1.0f, (23.0f - ((HealthAvispa)health).hambre) / 8.0f));
-        hambre_Bajo *= 10;
+        hambre_Bajo *= 50;
 
         hambre_Medio = Math.Max(0f, Math.Min(1f, Math.Min((((HealthAvispa)health).hambre - 17.0f) / 8.0f, (42.0f - ((HealthAvispa)health).hambre) / 7.0f)));
         hambre_Medio *= 25;
 
         hambre_Alto = Math.Max(0, Math.Min(1.0f, (((HealthAvispa)health).hambre - 38f) / 5.0f));
-        hambre_Alto *= 50;
+        hambre_Alto *= 10;
 
         float HambreTotal = (hambre_Bajo + hambre_Medio + hambre_Alto)/ (10 + 25 + 50);
         #endregion
@@ -69,12 +69,14 @@ public class IACharacterVehicleLandWasp : IACharacterVehicleLandWander
 
         health.Velocidad = health.VelocidadMax * ((HambreTotal + Distancia_Total));
         MoveToPosition(_AIVision.EnemyView.transform.position, health.Velocidad);
+        //Predecir(3);
     }
 
-    public virtual void Predecir(IACharacterVehicleLand ElObjetivo, float tiempo)
+    public virtual void Predecir(float tiempo)
     {
+        IACharacterVehicleLand ElObjetivo = _AIVision.EnemyView.GetComponent<IACharacterVehicleLand>();
         Vector2 SuPosicion = new Vector2(ElObjetivo.gameObject.transform.position.x, ElObjetivo.gameObject.transform.position.y);
-        Vector2 laDireccion = SuPosicion + (ElObjetivo.direccion * ElObjetivo.Velocidad * tiempo);
-        MoveToPosition(laDireccion, health.VelocidadMax / 2);
+        Vector2 laDireccion = SuPosicion + (ElObjetivo.direccion * ElObjetivo._health.VelocidadMax / 2 * tiempo);
+        MoveToPosition(laDireccion, health.Velocidad);
     }
 }

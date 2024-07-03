@@ -31,6 +31,7 @@ public class ActionNode : Action
 
         if (_IACharacterVehicle != null)
         {
+            //Debug.Log("no es nulo");
             _UnitType = _IACharacterVehicle._health.MyUnitType;
         }
        

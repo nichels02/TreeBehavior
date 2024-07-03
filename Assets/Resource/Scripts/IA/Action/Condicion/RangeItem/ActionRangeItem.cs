@@ -28,7 +28,14 @@ public class ActionRangeItem : ActionNodeAction
                 {
                     if (((VisionSensorAttack)_IACharacterVehicle._AIVision).ElItemAtaque != null)
                     {
-                        return TaskStatus.Success;
+                        if (_IACharacterVehicle._health.ItemRecolectar == ((VisionSensorAttack)_IACharacterVehicle._AIVision).ElItemAtaque.MyUnitTypeObject)
+                        {
+                            return TaskStatus.Success;
+                        }
+                        else
+                        {
+                            return TaskStatus.Failure;
+                        }
                     }
                     else
                     {
@@ -53,7 +60,14 @@ public class ActionRangeItem : ActionNodeAction
                 {
                     if (((VisionSensorAttack)_IACharacterAction._AIVision).ElItemAtaque != null)
                     {
-                        return TaskStatus.Success;
+                        if (_IACharacterAction._health.ItemRecolectar == ((VisionSensorAttack)_IACharacterAction._AIVision).ElItemAtaque.MyUnitTypeObject)
+                        {
+                            return TaskStatus.Success;
+                        }
+                        else
+                        {
+                            return TaskStatus.Failure;
+                        }
                     }
                     else
                     {

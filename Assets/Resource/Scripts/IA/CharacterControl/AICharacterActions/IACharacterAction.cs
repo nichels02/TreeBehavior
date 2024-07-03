@@ -9,4 +9,9 @@ public class IACharacterAction : IACharacterControl
         base.LoadComponent();
 
     }
+
+    public virtual void RecogerItem()
+    {
+        ((VisionSensorAttack)AIVision).ElItemAtaque.AlColicionar(health);
+    }
 }

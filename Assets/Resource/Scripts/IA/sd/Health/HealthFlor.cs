@@ -4,21 +4,14 @@ using UnityEngine;
 
  
 
-public class HealthSoldier : Health
+public class HealthFlor : Health
 {
-    public bool fueAdvertido;
-    public Vector3 posicionAdvertida;
+    [SerializeField] ItemSpawner ElSpawner;
     private void Start()
     {
         LoadComponent();
-        LaColmena.LLamarALasGuerreras += advertir;
+    }
 
-    }
-    public void advertir(Vector3 x)
-    {
-        posicionAdvertida = x;
-        fueAdvertido = true;
-    }
     public override bool Damage(int damage, Health healt)
     {
         bool x = base.Damage(damage, healt);
@@ -27,6 +20,7 @@ public class HealthSoldier : Health
         {
             //if (healt is HealthAvispa)
             // ((HealthAvispa)healt).
+            
 
             Dead();
         }
@@ -34,8 +28,7 @@ public class HealthSoldier : Health
     }
     public override void Dead()
     {
-        LaColmena.LLamarALasGuerreras -= advertir;
-        LaColmena.murioUnaAbejaGuerrera(transform.position);
+        ElSpawner.GenerarPolen(transform.position);
         base.Dead();
     }
 

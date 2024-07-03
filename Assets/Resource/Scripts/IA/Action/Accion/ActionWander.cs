@@ -19,7 +19,8 @@ public class ActionWander : ActionNodeAction
         {
             return TaskStatus.Failure;
         }
-        if(_IACharacterVehicle.agent.remainingDistance <= _IACharacterVehicle.agent.stoppingDistance || _IACharacterVehicle.agent.destination == null)
+        _IACharacterVehicle.agent.speed = _IACharacterVehicle._health.VelocidadMax / 2;
+        if (_IACharacterVehicle.agent.remainingDistance <= _IACharacterVehicle.agent.stoppingDistance || _IACharacterVehicle.agent.destination == null)
         {
             _IACharacterVehicle.Wander();
             return TaskStatus.Success;

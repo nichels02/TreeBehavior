@@ -26,9 +26,9 @@ public class ActionNotViewHuir : ActionNodeAction
             {
                 return TaskStatus.Success;
             }
-            else if (_IACharacterVehicle._health.ElTipoDeHuida != _IACharacterVehicle._AIVision.EnemyView.ElTipoDeHuida)
+            else if (_IACharacterVehicle._health.ElTipoDeHuida != _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
             {
-                return TaskStatus.Failure;
+                return TaskStatus.Success;
             }
         }
         else if (_IACharacterAction != null)
@@ -37,9 +37,9 @@ public class ActionNotViewHuir : ActionNodeAction
             {
                 return TaskStatus.Success;
             }
-            else if (_IACharacterAction._health.ElTipoDeHuida != _IACharacterAction._AIVision.EnemyView.ElTipoDeHuida)
+            else if (_IACharacterAction._health.ElTipoDeHuida != _IACharacterAction._AIVision.EnemyView.MyUnitType)
             {
-                return TaskStatus.Failure;
+                return TaskStatus.Success;
             }
         }
 

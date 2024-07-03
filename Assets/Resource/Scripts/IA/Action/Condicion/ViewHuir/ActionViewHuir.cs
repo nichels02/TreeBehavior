@@ -25,7 +25,7 @@ public class ActionViewHuir : ActionNodeAction
         {
             if (_IACharacterVehicle._AIVision.EnemyView != null)
             {
-                if (_IACharacterVehicle._health.ElTipoDeHuida == _IACharacterVehicle._AIVision.EnemyView.ElTipoDeHuida)
+                if (_IACharacterVehicle._health.ElTipoDeHuida == _IACharacterVehicle._AIVision.EnemyView.MyUnitType)
                 {
                     return TaskStatus.Success;
                 }
@@ -35,7 +35,7 @@ public class ActionViewHuir : ActionNodeAction
         {
             if (_IACharacterAction._AIVision.EnemyView != null)
             {
-                if (_IACharacterAction._health.ElTipoDeHuida == _IACharacterAction._AIVision.EnemyView.ElTipoDeHuida)
+                if (_IACharacterAction._health.ElTipoDeHuida == _IACharacterAction._AIVision.EnemyView.MyUnitType)
                 {
                     return TaskStatus.Success;
                 }

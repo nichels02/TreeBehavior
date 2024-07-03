@@ -17,14 +17,24 @@ public class IACharacterActionLandAtack : IACharacterActionLand
     }
     public override void atack()
     {
-        if (_AIVision is VisionSensorAttack && ((VisionSensorAttack)_AIVision).MainVisionAttack.InSight)
+        print("entro al metodo de ataque");
+        if (_AIVision is VisionSensorAttack /*&& ((VisionSensorAttack)_AIVision).MainVisionAttack.InSight*/)
         {
-            if (((VisionSensorAttack)_AIVision).EnemyView != null)
+            print("es el sensor correcto");
+            if (((VisionSensorAttack)_AIVision).HealthAtaque != null)
             {
-                if(((VisionSensorAttack)_AIVision).EnemyView.Damage(damage, _health))
+                print("vio a alguien");
+                if (((VisionSensorAttack)_AIVision).HealthAtaque.MyUnitType == health.ElTipoDeEnemigo)
                 {
-                    LoMataste();
+                    print("ataco");
+                    if (((VisionSensorAttack)_AIVision).EnemyView.Damage(damage, _health))
+                    {
+                        print("lo mato");
+                        LoMataste();
+                    }
                 }
+                    
+                
             }
         }
 

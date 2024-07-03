@@ -14,7 +14,7 @@ public class Colmena : MonoBehaviour
     public int CostoRecolectora;
     public int CostoGuerrera;
 
-    Action<Vector2> LLamarALasGuerreras;
+    public Action<Vector3> LLamarALasGuerreras;
 
     [SerializeField] GameObject Recolectora;
     [SerializeField] GameObject Guerrera;
@@ -42,7 +42,7 @@ public class Colmena : MonoBehaviour
         
     }
     
-    public void AvisarGuerreras(Vector2 x)
+    public void AvisarGuerreras(Vector3 x)
     {
         LLamarALasGuerreras?.Invoke(x);
     }

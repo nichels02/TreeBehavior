@@ -8,6 +8,7 @@ using UnityEngine;
 //NodoDeCondicion
 public class ActionEvade : ActionNodeAction
 {
+    bool YaPuedeEvadir = true;
     public override void OnStart()
     {
         base.OnStart();
@@ -18,8 +19,22 @@ public class ActionEvade : ActionNodeAction
         {
             return TaskStatus.Failure;
         }
-        _IACharacterVehicle.MoveToPositiononEvade();
+        if (YaPuedeEvadir == true)
+        {
+            _IACharacterVehicle.MoveToPositiononEvade();
+            StartCoroutine(Evadir());
+        }
         //SwitchMoveToAllied();
         return TaskStatus.Success;
     }
+
+
+    IEnumerator Evadir()
+    {
+        YaPuedeEvadir = false;
+        yield return new WaitForSeconds(5f);
+        YaPuedeEvadir = true;
+    }
+
+
 }

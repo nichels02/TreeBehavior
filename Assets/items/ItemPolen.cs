@@ -9,7 +9,7 @@ public class ItemPolen : item
     {
         if (Health is HealthBee)
         {
-            ((HealthBee)Health).RecoleccionActual = ((HealthBee)Health).RecoleccionActual + Recoleccion <= 100 ? 100 : ((HealthBee)Health).RecoleccionActual + Recoleccion;
+            ((HealthBee)Health).RecoleccionActual += Recoleccion;
             Destroy(gameObject);
         }
     }

@@ -30,6 +30,7 @@ public class HealthBee : Health
     }
     public override void Dead()
     {
+        LaColmena.murioUnaAbeja(transform.position);
         base.Dead();
     }
 

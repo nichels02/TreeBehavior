@@ -24,7 +24,7 @@ public class IACharacterActionLandWasp : IACharacterActionLandAtack
     {
         if (_health is HealthAvispa)
         {
-            ((HealthAvispa)_health).hambre += 40;
+            //((HealthAvispa)_health).hambre += 40;
         }
     }
 }
